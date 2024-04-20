@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/css">
+			p { color : red }
+		</script>
+		<title>Interacting with the DOM</title>
+	</head>
+	
+	<body>
+		<h1>LOOK AT WHAT YOU HAVE DONE:</h1>
+		<p>
+			<a href="#" onClick="colourChanger();">DO NOT CLICK ME</a>
+		</p>
+		<p>What colour am I?</p>
+		<p id="colourComment">???</p>
+		
+		<script>
+			var colour="red";
+			var comment=" I am ";
+			
+			function colourChanger() {
+	
+				if(colour === "red")
+					colour = "green";
+				else if(colour === "green")
+					colour = "blue";
+				else
+					colour = "red";
+			
+				comment = " I am "
+				
+				if(colour === "green")
+					comment = comment + "green."
+				else if(colour === "blue")
+					comment = comment + "blue."
+				else
+					comment = comment + "red."
+			
+				document.getElementById("colourComment").style.color = colour; 
+				document.getElementById("colourComment").innerHTML = comment;
+			}
+		</script>
+	</body>
+</html>

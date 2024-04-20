@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<hmtl>
+	<head>
+		<title>Interacting With The Window</title>
+	</head>
+	
+	<body>
+		<div id="output"></div>
+		
+		<script>
+			var out = document.getElementById("output");
+			
+			for (i=1; i<2001; i++) {
+				out.innerHTML += i+ " ";
+			}
+			window.scrollBy(0, 100);
+		</script>
+	</body>
+</html>
