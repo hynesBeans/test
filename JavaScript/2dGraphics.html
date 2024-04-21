@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#myCanvas{border:1px solid tomato;}
+		</style>
+	</head>
+	
+	<body>
+		<canvas id="myCanvas" width="500" height="500"></canvas>
+		
+		<script>
+			var canvas = document.getElementById("myCanvas");
+			var ctx = canvas.getContext('2d');
+			
+			ctx.strokeStyle = "tomato";
+			ctx.lineWidth = 10
+			
+			ctx.beginPath()
+			ctx.arc(75,75,50,0,Math.PI*2,true); 	// face
+			ctx.moveTo(110,75);
+			ctx.arc(75,75,35,0,Math.PI,false); 		// mouth
+			ctx.moveTo(65,65);
+			ctx.arc(60,65,5,0,Math.PI*2,true); 		// eye
+			ctx.moveTo(95,65);
+			ctx.arc(90,65,5,0,Math.PI*2,true); 		// eye
+			ctx.stroke();
+		</script>
+	</body>
+</html>
